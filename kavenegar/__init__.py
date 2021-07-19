@@ -8,7 +8,7 @@ __version__ = '0.1.0.dev'
 API_KEY = settings.ZARINPAL['API_KEY']
 
 
-def send_otp(receptor: int, template: str, token: str, token2: str = None, token3: str = None):
+def send_otp(receptor: int, template: str, token: str, token2: str = None, token3: str = None) -> dict:
     resp = requests.post(
         url=f'https://api.kavenegar.com/v1/{API_KEY}/verify/lookup.json',
         data={
