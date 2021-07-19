@@ -5,8 +5,8 @@ from django.conf import settings
 
 __version__ = '0.1.0.dev'
 
-API_KEY = settings.ZARINPAL['API_KEY']
-TEMPLATE = settings.ZARINPAL.get('TEMPLATE')
+API_KEY = settings.KAVENEGAR['API_KEY']
+TEMPLATE = settings.KAVENEGAR.get('TEMPLATE')
 
 
 def send_otp(receptor: int, token: str, token2: str = None, token3: str = None, template: str = None) -> dict:
